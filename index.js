@@ -7,9 +7,10 @@ require('dotenv').config();
 
 // === Configuración de Google Sheets ===
 const auth = new google.auth.GoogleAuth({
-  keyFile: 'credentials.json',
-  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-});
+    keyFile: 'secrets/credentials.json',
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  });
+  
 const sheets = google.sheets({ version: 'v4', auth });
 const SPREADSHEET_ID = process.env.SHEET_ID;
 
