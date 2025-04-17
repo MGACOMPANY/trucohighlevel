@@ -63,16 +63,9 @@ const registrarMovimiento = async (jugador, monto, tipo, operador) => {
 wppconnect
   .create({
     session: 'bot-truco',
+    browserArgs: ['--no-sandbox'],
+    executablePath: '/usr/bin/google-chrome',
     sessionPath: './tokens',
-    puppeteerOptions: {
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      executablePath: '/usr/bin/google-chrome', // <- necesario para Render
-    },
-    catchQR: (base64Qr, asciiQR) => {
-      console.clear();
-      console.log('🔄 Escaneá el código QR para conectar con WhatsApp');
-      console.log(asciiQR);
-    },
   })
   .then((client) => {
     console.log('✅ Bot conectado correctamente a WhatsApp');
@@ -81,7 +74,6 @@ wppconnect
   .catch((error) => {
     console.error('❌ Error al iniciar WPPConnect:', error);
   });
-
 
 
   const runBotLogic = (client) => {
