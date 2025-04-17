@@ -60,7 +60,6 @@ const registrarMovimiento = async (jugador, monto, tipo, operador) => {
 };
 
 // === Inicializar cliente de WhatsApp ===
-const wppconnect = require('@wppconnect-team/wppconnect');
 const qrcode = require('qrcode-terminal');
 
 wppconnect.create({
