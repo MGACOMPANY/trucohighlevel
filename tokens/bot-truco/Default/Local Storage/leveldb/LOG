@@ -1,0 +1,11 @@
+2025/04/17-13:48:43.476 65bc Creating DB C:\Users\GO ONLINE\bot-truco-whatsapp\tokens\bot-truco\Default\Local Storage\leveldb since it was missing.
+2025/04/17-13:48:43.963 65bc Reusing MANIFEST C:\Users\GO ONLINE\bot-truco-whatsapp\tokens\bot-truco\Default\Local Storage\leveldb/MANIFEST-000001
+2025/04/17-14:29:44.326 8530 Level-0 table #5: started
+2025/04/17-14:29:44.337 8530 Level-0 table #5: 20536 bytes OK
+2025/04/17-14:29:44.345 8530 Delete type=0 #3
+2025/04/17-15:21:44.267 8530 Level-0 table #7: started
+2025/04/17-15:21:44.276 8530 Level-0 table #7: 13942 bytes OK
+2025/04/17-15:21:44.284 8530 Delete type=0 #4
+2025/04/17-16:15:44.259 65bc Level-0 table #9: started
+2025/04/17-16:15:44.268 65bc Level-0 table #9: 13888 bytes OK
+2025/04/17-16:15:44.276 65bc Delete type=0 #6
