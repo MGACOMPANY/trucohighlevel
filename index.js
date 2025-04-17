@@ -60,8 +60,6 @@ const registrarMovimiento = async (jugador, monto, tipo, operador) => {
 };
 
 // === Inicializar cliente de WhatsApp ===
-const qrcode = require('qrcode-terminal');
-
 wppconnect.create({
   session: 'bot-truco',
   sessionPath: process.env.WPP_SESSION_PATH || '.wpp-session',
