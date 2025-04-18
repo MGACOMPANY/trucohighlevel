@@ -25,4 +25,5 @@ export PATH=$HOME/chrome:$PATH
 export PUPPETEER_EXECUTABLE_PATH="$HOME/chrome/chrome"
 
 # Instalar dependencias desde la raíz correcta
+corepack disable
 npm install
