@@ -3,17 +3,13 @@
   "version": "1.0.0",
   "type": "commonjs",
   "main": "index.js",
-"scripts": {
-  "build": "./render-build.sh",
-  "postinstall": "PUPPETEER_EXECUTABLE_PATH=/opt/chrome/opt/google/chrome/google-chrome npm install puppeteer --no-save",
-  "start": "node index.js"
-},
-
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "scripts": {
+    "build": "./render-build.sh",
+    "postinstall": "PUPPETEER_SKIP_DOWNLOAD=true npm install puppeteer --no-save",
+    "start": "node index.js"
+  },
   "dependencies": {
+    "puppeteer": "^21.3.8",
     "@wppconnect-team/wppconnect": "^1.37.0",
     "dotenv": "^16.5.0",
     "googleapis": "^148.0.0",
