@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "type": "commonjs",
   "main": "index.js",
-  "scripts": {
-    "build": "./render-build.sh",
-    "start": "node index.js"
-  },
+"scripts": {
+  "build": "./render-build.sh",
+  "postinstall": "PUPPETEER_EXECUTABLE_PATH=/opt/chrome/opt/google/chrome/google-chrome npm install puppeteer --no-save",
+  "start": "node index.js"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
