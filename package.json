@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "./render-build.sh",
-    "postinstall": "PUPPETEER_SKIP_DOWNLOAD=true npm install puppeteer --no-save",
     "start": "node index.js"
   },
   "keywords": [],
@@ -13,7 +12,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "puppeteer": "^21.3.8",
     "@wppconnect-team/wppconnect": "^1.37.0",
     "dotenv": "^16.5.0",
     "googleapis": "^148.0.0",
