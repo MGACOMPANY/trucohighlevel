@@ -60,20 +60,46 @@ const registrarMovimiento = async (jugador, monto, tipo, operador) => {
 };
 
 // === Inicializar cliente de WhatsApp ===
-wppconnect
-  .create({
-    session: 'bot-truco',
-    browserArgs: ['--no-sandbox'],
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/home/render/chrome/chrome',
-    sessionPath: './tokens',
-  })
-  .then((client) => {
-    console.log('✅ Bot conectado correctamente a WhatsApp');
-    runBotLogic(client);
-  })
-  .catch((error) => {
-    console.error('❌ Error al iniciar WPPConnect:', error);
-  });
+const chromePath = process.env.PUPPETEER_EXECUTABLE_PATH || '/home/render/chrome/chrome';
+
+wppconnect.create({
+  session: 'bot-truco',
+  sessionPath: './.wwebjs_auth/session',
+  headless: true,
+  executablePath: chromePath,
+  browserArgs: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+    '--disable-accelerated-2d-canvas',
+    '--no-first-run',
+    '--no-zygote',
+    '--single-process', // 👈 importante para ambientes como Render
+    '--disable-gpu'
+  ],
+  puppeteerOptions: {
+    executablePath: chromePath,
+    headless: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-accelerated-2d-canvas',
+      '--no-first-run',
+      '--no-zygote',
+      '--single-process',
+      '--disable-gpu'
+    ]
+  }
+})
+.then((client) => {
+  console.log('[WPPConnect] Cliente iniciado correctamente.');
+  runBotLogic(client);
+})
+.catch((error) => {
+  console.error('❌ Error al iniciar WPPConnect:', error);
+});
+
 
 
   const runBotLogic = (client) => {
