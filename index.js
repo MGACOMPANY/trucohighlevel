@@ -64,7 +64,7 @@ wppconnect
   .create({
     session: 'bot-truco',
     browserArgs: ['--no-sandbox'],
-    executablePath: '/usr/bin/google-chrome',
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/home/render/chrome/chrome',
     sessionPath: './tokens',
   })
   .then((client) => {

@@ -13,6 +13,9 @@ tar -xvf data.tar.xz
 # Mover Chrome a una carpeta accesible
 mkdir -p $HOME/chrome
 mv opt/google/chrome/* $HOME/chrome
+echo "✅ Chrome instalado en: $HOME/chrome"
+ls -l $HOME/chrome
+
 
 # Volver a la raíz del proyecto
 cd "$ROOT_PATH" || exit 1
